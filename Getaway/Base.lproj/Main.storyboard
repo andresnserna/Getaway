@@ -55,11 +55,17 @@
                                                 <rect key="frame" x="8" y="375.33333333333337" width="245" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="arrow.up.right.square.fill" catalog="system" title=" View My Passes in Wallet"/>
+                                                <connections>
+                                                    <action selector="btn_viewPasses:" destination="2FJ-6w-M9V" eventType="touchUpInside" id="Nx9-DG-uoM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNl-dL-ZNC">
                                                 <rect key="frame" x="8" y="418.33333333333337" width="228" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="airplane.departure" catalog="system" title=" Find Airports Near Me"/>
+                                                <connections>
+                                                    <action selector="btn_findAirports:" destination="2FJ-6w-M9V" eventType="touchUpInside" id="tSe-4X-KSw"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -112,6 +118,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="A4s-X1-sH6"/>
+                    <connections>
+                        <outlet property="lbl_dates" destination="t3n-XJ-HB0" id="W44-SS-zMm"/>
+                        <outlet property="lbl_destination" destination="NJP-Pm-t5n" id="Hzv-XX-U80"/>
+                        <outlet property="view_insideScrollView" destination="Pqg-ow-rMB" id="jTp-oM-HkO"/>
+                        <outlet property="view_mapView" destination="nGp-pg-G3V" id="kTv-bQ-Zj4"/>
+                        <outlet property="view_scrollView" destination="ar6-1K-ZLE" id="yRX-Nx-vOX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hf1-p4-ge5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
