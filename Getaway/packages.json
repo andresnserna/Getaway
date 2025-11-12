@@ -3,7 +3,6 @@
     "destination_name": "Folsom Street Fair - San Francisco",
     "trip_START": "2025-09-18",
     "trip_END": "2025-09-23",
-
     "hotels": [
       {
         "hotel_name": "Hotel Zelos",
@@ -18,7 +17,6 @@
         "hotel_longitude": -122.4123
       }
     ],
-
     "entertainment": [
       {
         "entertainment_name": "Folsom Street Fair Grounds",
@@ -40,12 +38,13 @@
       }
     ]
   },
-
+  
+  
+  
   {
     "destination_name": "Purple Party - Dallas",
     "trip_START": "2025-05-07",
     "trip_END": "2025-05-12",
-
     "hotels": [
       {
         "hotel_name": "The Statler Dallas",
@@ -54,7 +53,6 @@
         "hotel_longitude": -96.7956
       }
     ],
-
     "entertainment": [
       {
         "entertainment_name": "Main Event Party",
@@ -76,12 +74,55 @@
       }
     ]
   },
-
+  
+  
+  
+  {
+    "destination_name": "Splash - Austin",
+    "trip_START": "2025-06-10",
+    "trip_END": "2025-06-15",
+    "hotels": [
+      {
+        "hotel_name": "The Driskill",
+        "hotel_description": "Historic luxury hotel located downtown, close to the nightlife.",
+        "hotel_latitude": 30.2672,
+        "hotel_longitude": -97.7431
+      },
+      {
+        "hotel_name": "Hotel Van Zandt",
+        "hotel_description": "Modern boutique hotel in Rainey Street district.",
+        "hotel_latitude": 30.2509,
+        "hotel_longitude": -97.7380
+      }
+    ],
+    "entertainment": [
+      {
+        "entertainment_name": "Splash Party Main Stage",
+        "entertainment_description": "Outdoor pool and rooftop events with live DJs and performers.",
+        "entertainment_latitude": 30.2675,
+        "entertainment_longitude": -97.7400
+      },
+      {
+        "entertainment_name": "Austin Dance Club",
+        "entertainment_description": "Popular dance club for nightly events during Splash weekend.",
+        "entertainment_latitude": 30.2650,
+        "entertainment_longitude": -97.7425
+      },
+      {
+        "entertainment_name": "Lavaca Street Bar",
+        "entertainment_description": "Casual bar with outdoor seating and local performances.",
+        "entertainment_latitude": 30.2680,
+        "entertainment_longitude": -97.7438
+      }
+    ]
+  },
+  
+  
+  
   {
     "destination_name": "Market Days - Chicago",
     "trip_START": "2025-08-06",
     "trip_END": "2025-08-11",
-
     "hotels": [
       {
         "hotel_name": "Hotel Versey",
@@ -96,7 +137,6 @@
         "hotel_longitude": -87.6470
       }
     ],
-
     "entertainment": [
       {
         "entertainment_name": "Halsted Street Festival Zone",
@@ -115,6 +155,48 @@
         "entertainment_description": "Local favorite with DJs, dance floors, and themed nights.",
         "entertainment_latitude": 41.9399,
         "entertainment_longitude": -87.6530
+      }
+    ]
+  },
+  
+  
+  
+  {
+    "destination_name": "Tomorrowland - Boom, Belgium",
+    "trip_START": "2025-07-18",
+    "trip_END": "2025-07-27",
+    "hotels": [
+      {
+        "hotel_name": "Hotel Boom",
+        "hotel_description": "Modern hotel just a few minutes from the festival grounds.",
+        "hotel_latitude": 51.0833,
+        "hotel_longitude": 5.1333
+      },
+      {
+        "hotel_name": "Novotel Antwerp",
+        "hotel_description": "Comfortable stay in Antwerp city center with easy train access to Boom.",
+        "hotel_latitude": 51.2194,
+        "hotel_longitude": 4.4025
+      }
+    ],
+    "entertainment": [
+      {
+        "entertainment_name": "Tomorrowland Main Stage",
+        "entertainment_description": "The world-famous festival grounds with top DJs performing.",
+        "entertainment_latitude": 51.0815,
+        "entertainment_longitude": 5.1320
+      },
+      {
+        "entertainment_name": "Freedom Stage",
+        "entertainment_description": "Large electronic stage with immersive visuals.",
+        "entertainment_latitude": 51.0820,
+        "entertainment_longitude": 5.1335
+      },
+      {
+        "entertainment_name": "Garden Stage",
+        "entertainment_description": "Outdoor stage with dance and light shows.",
+        "entertainment_latitude": 51.0810,
+        "entertainment_longitude": 5.1310
       }
     ]
   }
