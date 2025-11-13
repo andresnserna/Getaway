@@ -27,48 +27,18 @@ class DestinationViewController: UIViewController {
     @IBOutlet weak var btn_findAirportsOutlet: UIButton!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        addContentBelowButton()
-        addContentBelowButton()
-        addContentBelowButton()
-        addContentBelowButton()
-
-        // Do any additional setup after loading the view.
-    }
-    
+            super.viewDidLoad()
+            
+            addContentBelowButton()
+        }
+        
     func addContentBelowButton() {
         guard let contentView = view_insideScrollView else { return }
         
-        // Example heading label
-        let heading = UILabel()
-        heading.text = "More Info"
-        heading.font = .boldSystemFont(ofSize: 24)
-        heading.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(heading)
-
-        // Example description
-        let description = UILabel()
-        description.text = "This is some extra information that appears below the button."
-        description.font = .systemFont(ofSize: 16)
-        description.numberOfLines = 0
-        description.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(description)
-
-        // Constrain heading below the button
-        NSLayoutConstraint.activate([
-            heading.topAnchor.constraint(equalTo: btn_findAirportsOutlet.bottomAnchor, constant: 40),
-            heading.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            heading.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-
-            description.topAnchor.constraint(equalTo: heading.bottomAnchor, constant: 12),
-            description.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            description.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            description.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
-        ])
+        // Keep track of the last element to chain constraints
+        var lastElement: UIView = btn_findAirportsOutlet
         
-        // anchor bottom of last element to contentView.bottomAnchor
-        // So scroll view knows how tall the content is
-        description.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20).isActive = true
+        // Add multiple sections to demonstrate scrolling
     }
 
 
