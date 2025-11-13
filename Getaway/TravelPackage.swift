@@ -38,6 +38,7 @@ func loadPackages() -> [TravelPackage] {
     do {
         let data = try Data(contentsOf: url)
         let packages = try JSONDecoder().decode([TravelPackage].self, from: data)
+        print("travel packages loaded successfully")
         return packages
     } catch {
         print("Failed to decode packages.json: \(error)")

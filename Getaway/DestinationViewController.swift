@@ -35,19 +35,35 @@ class DestinationViewController: UIViewController {
     @IBOutlet weak var btn_findAirportsOutlet: UIButton!
     
     override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            addContentBelowButton()
-        }
+        super.viewDidLoad()
         
-    func addContentBelowButton() {
-        guard let contentView = view_insideScrollView else { return }
-        
-        // Keep track of the last element to chain constraints
-        var lastElement: UIView = btn_findAirportsOutlet
-        
-        // Add multiple sections to demonstrate scrolling
+        populateLabels()
+        setMapPins()
+    
     }
 
+    func populateLabels() {
+        guard let package = package else { print("error loading package"); return }
+        
+        lbl_destination.text = package.destination_name
+        lbl_dates.text = "\(package.trip_START) - \(package.trip_END)"
+                
+        lbl_hotel1Name.text = package.hotels[0].hotel_name
+        lbl_hotel1Description.text = package.hotels[0].hotel_description
+        lbl_hotel2Name.text = package.hotels[1].hotel_name
+        lbl_hotel2Description.text = package.hotels[1].hotel_description
+        
+        lbl_entertainment1Name.text = package.entertainment[0].entertainment_name
+        lbl_entertainment1Description.text = package.entertainment[0].entertainment_description
+        lbl_entertainment2Name.text = package.entertainment[1].entertainment_name
+        lbl_entertainment2Description.text = package.entertainment[1].entertainment_description
+        
+    }
+    
+    func setMapPins() {
+        // hotel pins
+        
+        // entertainment pins
+    }
 
 }
