@@ -6,10 +6,6 @@
 //
 
 import UIKit
-import CoreData
-
-let appDelegate = UIApplication.shared.delegate as! AppDelegate
-let context = appDelegate.persistentContainer.viewContext
 
 class ViewController: UITableViewController{
 
@@ -22,8 +18,7 @@ class ViewController: UITableViewController{
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showPackageDetail",
-           let destination = segue.destination as? DestinationViewController,
+        if let destination = segue.destination as? DestinationViewController,
            let indexPath = tableView.indexPathForSelectedRow {
             destination.package = travelPackages[indexPath.row]
         }
