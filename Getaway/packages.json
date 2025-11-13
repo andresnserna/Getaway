@@ -25,12 +25,6 @@
         "entertainment_longitude": -122.4156
       },
       {
-        "entertainment_name": "DNA Lounge Afterparty",
-        "entertainment_description": "Iconic afterparty venue with multiple dance floors and live DJs.",
-        "entertainment_latitude": 37.7711,
-        "entertainment_longitude": -122.4122
-      },
-      {
         "entertainment_name": "Eagle Bar",
         "entertainment_description": "Famous leather bar with outdoor patio and local crowd.",
         "entertainment_latitude": 37.7682,
@@ -51,6 +45,12 @@
         "hotel_description": "Retro-chic hotel with rooftop pool and proximity to major nightlife.",
         "hotel_latitude": 32.7803,
         "hotel_longitude": -96.7956
+      },
+      {
+          "hotel_name": "Canvas Hotel Dallas",
+          "hotel_description": "Trendy boutique hotel featuring a rooftop pool and bar with skyline views, close to the Cedars District nightlife.",
+          "hotel_latitude": 32.7693,
+          "hotel_longitude": -96.7997
       }
     ],
     "entertainment": [
@@ -65,12 +65,6 @@
         "entertainment_description": "Large dance club with laser shows, drag performances, and outdoor patio.",
         "entertainment_latitude": 32.8106,
         "entertainment_longitude": -96.7965
-      },
-      {
-        "entertainment_name": "Round-Up Saloon",
-        "entertainment_description": "Country-themed bar known for its welcoming LGBTQ+ community.",
-        "entertainment_latitude": 32.8110,
-        "entertainment_longitude": -96.7969
       }
     ]
   },
@@ -101,12 +95,6 @@
         "entertainment_description": "Outdoor pool and rooftop events with live DJs and performers.",
         "entertainment_latitude": 30.2675,
         "entertainment_longitude": -97.7400
-      },
-      {
-        "entertainment_name": "Austin Dance Club",
-        "entertainment_description": "Popular dance club for nightly events during Splash weekend.",
-        "entertainment_latitude": 30.2650,
-        "entertainment_longitude": -97.7425
       },
       {
         "entertainment_name": "Lavaca Street Bar",
@@ -143,12 +131,6 @@
         "entertainment_description": "The main Market Days area featuring music, food, and outdoor events.",
         "entertainment_latitude": 41.9474,
         "entertainment_longitude": -87.6493
-      },
-      {
-        "entertainment_name": "Sidetrack",
-        "entertainment_description": "Massive multi-level bar known for music videos and drag shows.",
-        "entertainment_latitude": 41.9470,
-        "entertainment_longitude": -87.6495
       },
       {
         "entertainment_name": "Roscoe’s Tavern",
@@ -191,12 +173,6 @@
         "entertainment_description": "Large electronic stage with immersive visuals.",
         "entertainment_latitude": 51.0820,
         "entertainment_longitude": 5.1335
-      },
-      {
-        "entertainment_name": "Garden Stage",
-        "entertainment_description": "Outdoor stage with dance and light shows.",
-        "entertainment_latitude": 51.0810,
-        "entertainment_longitude": 5.1310
       }
     ]
   }
