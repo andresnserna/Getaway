@@ -27,9 +27,30 @@ class DestinationViewController: UIViewController {
     @IBOutlet weak var lbl_destination: UILabel!
     @IBOutlet weak var lbl_dates: UILabel!
     @IBAction func btn_viewPasses(_ sender: UIButton) {
+        // Open Wallet app
+        if let walletURL = URL(string: "shoebox://") {
+            if UIApplication.shared.canOpenURL(walletURL) {
+                UIApplication.shared.open(walletURL, options: [:], completionHandler: nil)
+            } else {
+                // Fallback if Wallet app can't be opened
+                let alert = UIAlertController(title: "Wallet Not Available",
+                                             message: "Unable to open Wallet app.",
+                                             preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                present(alert, animated: true)
+            }
+        }
     }
     
     @IBAction func btn_findAirports(_ sender: UIButton) {
+        // Google search for "airports near me"
+        let searchQuery = "airports near me"
+        let encodedQuery = searchQuery.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let googleSearchURL = "https://www.google.com/search?q=\(encodedQuery)"
+        
+        if let url = URL(string: googleSearchURL) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     @IBOutlet weak var btn_findAirportsOutlet: UIButton!
@@ -142,6 +163,12 @@ class DestinationViewController: UIViewController {
         
         let region = MKCoordinateRegion(center: center, span: span)
         view_mapView.setRegion(region, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let reviewVC = segue.destination as? ReviewViewController {
+            reviewVC.destinationName = package?.destination_name
+        }
     }
 
 }

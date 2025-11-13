@@ -62,8 +62,8 @@ class ReviewViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let newReview = Review(context: context)
             newReview.reviewer = reviewerName
             newReview.text = reviewText
-            newReview.date = Date()
-            newReview.rating = 5  // You can add UI for this later
+            newReview.destination = self.destinationName
+
             
             // Save context
             do {
@@ -82,6 +82,24 @@ class ReviewViewController: UIViewController, UITableViewDelegate, UITableViewDa
         present(alert, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Get the review to delete
+            let reviewToDelete = items[indexPath.row]
+            context.delete(reviewToDelete)
+            
+            // Save the context
+            do {
+                try context.save()
+                items.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                
+            } catch {
+                print("Error deleting review: \(error)")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -92,8 +110,8 @@ class ReviewViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func loadReviews() {
         let fetchRequest: NSFetchRequest<Review> = Review.fetchRequest()
-        
-        // Optional: filter by destination if you want
+            
+        // Filter by destination
         if let destination = destinationName {
             fetchRequest.predicate = NSPredicate(format: "destination == %@", destination)
         }
