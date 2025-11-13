@@ -13,6 +13,14 @@ class DestinationViewController: UIViewController {
     var package: TravelPackage?
     
     
+    @IBOutlet weak var lbl_entertainment2Description: UILabel!
+    @IBOutlet weak var lbl_entertainment2Name: UILabel!
+    @IBOutlet weak var lbl_entertainment1Description: UILabel!
+    @IBOutlet weak var lbl_entertainment1Name: UILabel!
+    @IBOutlet weak var lbl_hotel2Description: UILabel!
+    @IBOutlet weak var lbl_hotel2Name: UILabel!
+    @IBOutlet weak var lbl_hotel1Description: UILabel!
+    @IBOutlet weak var lbl_hotel1Name: UILabel!
     @IBOutlet weak var view_insideScrollView: UIView!
     @IBOutlet weak var view_mapView: MKMapView!
     @IBOutlet weak var view_scrollView: UIScrollView!
